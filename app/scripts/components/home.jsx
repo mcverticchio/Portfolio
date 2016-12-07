@@ -9,11 +9,22 @@ var HomeContainer = React.createClass({
         <div className="row">
           <div className="col-md-12 imageContentDiv">
             <div className="imageOfMeContainer">
-              <h1>Hello</h1>
-
-              </div>
+            </div>
           </div>
         </div>
+
+
+          <div className="row">
+            <div className="col-md-12 aboutMeSection">
+              <p>My name is Caroline Verticchio!</p>
+              <div>
+                <div className="col-md-4 contact"><span className="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><span className="contactText">(864)316-8588</span></div>
+                <div className="col-md-4 contact"><span className="glyphicon glyphicon-envelope" aria-hidden="true"></span><span className="contactText">mcverticchio@gmail.com</span></div>
+                <div className="col-md-4 contact"><span className="glyphicon glyphicon-file" aria-hidden="true"></span><span className="contactText">Resume</span></div>
+              </div>
+            </div>
+          </div>
+
 
         <div className="container">
           <div className="row">

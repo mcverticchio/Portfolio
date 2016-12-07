@@ -17,18 +17,18 @@ img {
 }
 
 body {
-  background-color: #F0EBE7;
+  background-color: #DFDEE2;
 }
 
 //################## TEMPLATE STYLES ##############################//
 .header {
-  background-color: #4B5072;
+  background-color: #5F5E6E;
   height: 100px;
   font-family: 'Poiret One', cursive;
   vertical-align: middle;
   text-transform: uppercase;
   font-size: 25px;
-  color: #F0EBE7;
+  color: #A8BDC9;
   position:fixed;
   top: 0;
   z-index: 100;
@@ -43,17 +43,18 @@ body {
 }
 
 .footer {
-  background-color: #4B5072;
+  background-color: #5F5E6E;
   height: 70px;
+  border-top: 3px solid #2f2f37;
   .fa {
     margin-top: 20px;
     font-size: 35px;
     text-align: center;
-    color: #FEF9E6;
+    color: #2f2f37;
   }
   .fa:hover {
     cursor: pointer;
-    color: #F0EBE7;
+    color: #A8BDC9;
   }
 }
 
@@ -62,15 +63,15 @@ body {
 
 .imageContentDiv{
   padding-right: 0px;
-  margin-top: 100px;
+  // margin-top: 100px;
 }
 .imageOfMeContainer{
   position: relative;
-  height: 550px;
+  height: 400px;
   background: {
    image: url('../images/IMG_2991.jpg');
    size: 100%;
-   position: 30% 56%;
+   position: 30% 52%;
    repeat: no-repeat;
  }
   // background-image: url('../images/IMG_2991.jpg');
@@ -101,11 +102,14 @@ h1 {
 .myWorkSection {
   background-color: white;
   margin-top: 20px;
+  margin-bottom: 20px;
+  // border: 4px solid #2f2f37;
 }
 .myWorkTitle {
-  font-family: 'Poiret One', cursive;
-    font-size: 37px;
-    border-bottom: 1px solid black;
+  font-family: 'Pacifico', cursive;
+  font-size: 37px;
+  border-bottom: 2px solid #2f2f37;
+  color: #A8BDC9;
 }
 .thumb {
   height: 300px;
@@ -116,4 +120,43 @@ h1 {
 }
 .project {
   border: 1px solid black;
+}
+
+
+
+
+// .fullSpace {
+//   background-color: #5F5E6E;
+// }
+.aboutMeSection {
+  // margin-top: 20px;
+  height: 500px;
+  // border: 4px solid #2f2f37;
+  background-color: #5F5E6E;
+  padding: 50px;
+}
+p {
+  border: 4px solid #2f2f37;
+  border-bottom: none;
+  margin-bottom: 0px;
+  color: #B5BFBC;
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  padding: 100px;
+  text-align: center;
+}
+.contact {
+  border: 4px solid #2f2f37;
+  padding: 50px;
+  color:#B5BFBC;
+  font-family: 'Pacifico', cursive;
+}
+.glyphicon {
+  color: #B5BFBC;
+  font-size: 25px;
+  text-align: center;
+}
+.contactText {
+  margin-left: 20px;
+  font-size: 25px;
 }

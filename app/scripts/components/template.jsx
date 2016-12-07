@@ -8,7 +8,7 @@ var TemplateContainer = React.createClass({
         <div className="row">
           <div className="col-md-12 header">
             <header>
-              <span>Logo</span>
+              
               <div className="links">
                 <span>Portfolio</span>
                 <span>Resume</span>

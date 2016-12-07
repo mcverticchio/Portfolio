@@ -15,3 +15,105 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+
+body {
+  background-color: #F0EBE7;
+}
+
+//################## TEMPLATE STYLES ##############################//
+.header {
+  background-color: #4B5072;
+  height: 100px;
+  font-family: 'Poiret One', cursive;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #F0EBE7;
+  position:fixed;
+  top: 0;
+  z-index: 100;
+  .links {
+    float: right;
+    margin-right:30px;
+    margin-top: 30px;
+  }
+  .links span{
+    margin-right:35px;
+  }
+}
+
+.footer {
+  background-color: #4B5072;
+  height: 70px;
+  .fa {
+    margin-top: 20px;
+    font-size: 35px;
+    text-align: center;
+    color: #FEF9E6;
+  }
+  .fa:hover {
+    cursor: pointer;
+    color: #F0EBE7;
+  }
+}
+
+
+//################## HOME PAGE STYLES ##############################//
+
+.imageContentDiv{
+  padding-right: 0px;
+  margin-top: 100px;
+}
+.imageOfMeContainer{
+  position: relative;
+  height: 550px;
+  background: {
+   image: url('../images/IMG_2991.jpg');
+   size: 100%;
+   position: 30% 56%;
+   repeat: no-repeat;
+ }
+  // background-image: url('../images/IMG_2991.jpg');
+  // height: 500px;
+  // background-size: 100%;
+  // background-position: center;
+  // overflow: none;
+}
+  .imageOfMeContainer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background-color: rgba(63, 129, 191, 0.4);
+  // z-index: -1;
+}
+h1 {
+  font-family: 'Poiret One', cursive;
+  margin-top: 0px;
+  font-size: 200px;
+  color: #FEF9E6;
+  z-index: 100;
+}
+
+
+.myWorkSection {
+  background-color: white;
+  margin-top: 20px;
+}
+.myWorkTitle {
+  font-family: 'Poiret One', cursive;
+    font-size: 37px;
+    border-bottom: 1px solid black;
+}
+.thumb {
+  height: 300px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.project {
+  border: 1px solid black;
+}

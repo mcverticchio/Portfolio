@@ -6,6 +6,15 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 
+// Color Assignment
+$background: #DFDEE2;
+$purple: #5F5E6E;
+$blue: #A8BDC9;
+$darkpurple: #2f2f37;
+$green: #B5BFBC;
+
+
+
 *,
 *::before,
 *::after {
@@ -17,35 +26,52 @@ img {
 }
 
 body {
-  background-color: #DFDEE2;
+  background-color: $background;
 }
 
 //################## TEMPLATE STYLES ##############################//
 .header {
-  background-color: #5F5E6E;
-  height: 100px;
+  background-color: $darkpurple;
+  height: 50px;
   font-family: 'Poiret One', cursive;
   vertical-align: middle;
-  text-transform: uppercase;
   font-size: 25px;
-  color: #A8BDC9;
-  position:fixed;
-  top: 0;
-  z-index: 100;
+  color: $purple;
+  // position:fixed;
+  // top: 0;
+  // z-index: 100;
+  .name {
+    font-family: 'Pacifico', cursive;
+    margin-top: 8px;
+    margin-left: 30px;
+    font-size: 25px;
+    display:inline-block;
+  }
+  .name:hover {
+    transition: color 0.2s ease;
+    color:white;
+    cursor:pointer;
+  }
   .links {
+    text-transform: uppercase;
     float: right;
     margin-right:30px;
-    margin-top: 30px;
+    margin-top: 8px;
   }
   .links span{
     margin-right:35px;
   }
+  .links span:hover {
+    transition: color 0.2s ease;
+    cursor: pointer;
+    color: white;
+  }
 }
 
 .footer {
-  background-color: #5F5E6E;
+  background-color: $purple;
   height: 70px;
-  border-top: 3px solid #2f2f37;
+  border-top: 3px solid $darkpurple;
   .fa {
     margin-top: 20px;
     font-size: 35px;
@@ -54,7 +80,7 @@ body {
   }
   .fa:hover {
     cursor: pointer;
-    color: #A8BDC9;
+    color: $blue;
   }
 }
 
@@ -100,7 +126,7 @@ h1 {
 
 
 .myWorkSection {
-  background-color: white;
+  // background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   // border: 4px solid #2f2f37;
@@ -108,14 +134,18 @@ h1 {
 .myWorkTitle {
   font-family: 'Pacifico', cursive;
   font-size: 37px;
-  border-bottom: 2px solid #2f2f37;
-  color: #A8BDC9;
+  border-bottom: 2px solid $darkpurple;
+  color: $blue;
 }
 .thumb {
   height: 300px;
   img {
     height: 100%;
     width: 100%;
+    border: 3px solid $darkpurple;
+  }
+  .thumb-image{
+    background-image: url('../images/skatebrd.jpg');
   }
 }
 .project {
@@ -132,14 +162,14 @@ h1 {
   // margin-top: 20px;
   height: 500px;
   // border: 4px solid #2f2f37;
-  background-color: #5F5E6E;
+  background-color: $purple;
   padding: 50px;
 }
 p {
-  border: 4px solid #2f2f37;
+  border: 4px solid $darkpurple;
   border-bottom: none;
   margin-bottom: 0px;
-  color: #B5BFBC;
+  color: $green;
   font-family: 'Poiret One', cursive;
   font-size: 20px;
   padding: 100px;
@@ -148,11 +178,11 @@ p {
 .contact {
   border: 4px solid #2f2f37;
   padding: 50px;
-  color:#B5BFBC;
+  color:$green;
   font-family: 'Pacifico', cursive;
 }
 .glyphicon {
-  color: #B5BFBC;
+  color: $green;
   font-size: 25px;
   text-align: center;
 }

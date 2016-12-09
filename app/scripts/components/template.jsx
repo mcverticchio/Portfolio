@@ -2,16 +2,28 @@ var React = require('react');
 var Backbone = require('backbone');
 
 var TemplateContainer = React.createClass({
+  handleHomeNav: function(e){
+    e.preventDefault();
+    Backbone.history.navigate('', {trigger:true});
+  },
+  handleResumeNav: function(e){
+    e.preventDefault();
+    Backbone.history.navigate('resume/', {trigger:true});
+  },
+  handleWorkNav: function(e){
+    e.preventDefault();
+    Backbone.history.navigate('work/', {trigger:true});
+  },
   render: function(){
     return (
       <div>
         <div className="row">
           <div className="col-md-12 header">
             <header>
-              
+              <div onClick={this.handleHomeNav} className="name">Caroline Verticchio</div>
               <div className="links">
-                <span>Portfolio</span>
-                <span>Resume</span>
+                <span onClick={this.handleWorkNav}>Portfolio</span>
+                <span onClick={this.handleResumeNav}>Resume</span>
                 <span>Contact</span>
               </div>
             </header>

@@ -17,10 +17,10 @@ var TemplateContainer = React.createClass({
   render: function(){
     return (
       <div>
-        <div className="row">
-          <div className="col-md-12 header">
+        <div className="topContainer container-fluid">
+          <div className="row header">
             <header>
-              <div onClick={this.handleHomeNav} className="name">Caroline Verticchio</div>
+              <div onClick={this.handleHomeNav} className="name">LOGO</div>
               <div className="links">
                 <span onClick={this.handleWorkNav}>Portfolio</span>
                 <span onClick={this.handleResumeNav}>Resume</span>
@@ -34,8 +34,8 @@ var TemplateContainer = React.createClass({
         {this.props.children}
 
 
-        <div className="row">
-          <div className="col-md-12 footer">
+        <div className="container-fluid">
+          <div className="row footer">
             <a href="https://github.com/mcverticchio"><i className="col-md-3 fa fa-github" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile"><i className="col-md-3 fa fa-linkedin-square" aria-hidden="true"></i></a>
             <a href="https://www.facebook.com/caroline.verticchio"><i className="col-md-3 fa fa-facebook-square" aria-hidden="true"></i></a>

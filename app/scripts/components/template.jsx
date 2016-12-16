@@ -20,12 +20,13 @@ var TemplateContainer = React.createClass({
         <div className="topContainer container-fluid">
           <div className="row header">
             <header>
-              <div onClick={this.handleHomeNav} className="name">LOGO</div>
+              <div onClick={this.handleHomeNav} className="name"><img src="images/logo3.svg" /><span className="myName">Caroline Verticchio/<span className="title">Front-End Developer</span></span></div>
               <div className="links">
                 <span onClick={this.handleWorkNav}>Portfolio</span>
                 <span onClick={this.handleResumeNav}>Resume</span>
                 <span>Contact</span>
               </div>
+              <div className="line"></div>
             </header>
           </div>
         </div>
@@ -36,6 +37,7 @@ var TemplateContainer = React.createClass({
 
         <div className="container-fluid">
           <div className="row footer">
+            <div className="bottomLine"></div>
             <a href="https://github.com/mcverticchio"><i className="col-md-3 fa fa-github" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile"><i className="col-md-3 fa fa-linkedin-square" aria-hidden="true"></i></a>
             <a href="https://www.facebook.com/caroline.verticchio"><i className="col-md-3 fa fa-facebook-square" aria-hidden="true"></i></a>

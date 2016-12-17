@@ -7,7 +7,6 @@ var ResumeContainer = React.createClass({
     return (
       <Template>
         <div className="container">
-          <h1>RESUME HERE</h1>
           <div className="row">
             <div className="col-sm-12">
               <h3>Skill</h3>

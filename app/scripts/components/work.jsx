@@ -61,27 +61,3 @@ var WorkContainer = React.createClass({
 module.exports = {
   WorkContainer: WorkContainer
 }
-
-
-// <div className="col-xs-6 col-md-4 thumb">
-//     <a href="https://mcverticchio.github.io/1.2-octocats/" className="thumbnail">
-//       <img src="images/octocat.png" alt="..." />
-//     </a>
-// </div>
-//
-// <div className="col-xs-6 col-md-4 thumb">
-//     <a href="https://mcverticchio.github.io/1.4-pixel-perfect/" className="thumbnail">
-//       <img src="images/surf.png" alt="..." />
-//     </a>
-// </div>
-//
-// <div className="col-xs-6 col-md-4 thumb">
-//     <a href="https://mcverticchio.github.io/2.2-sass-bootstrap/" className="thumbnail">
-//       <img src="images/skatebrd.png" alt="..." />
-//     </a>
-// </div>
-//
-// <div className="col-xs-6 col-md-4 thumb thumb-image">
-//     <a href="https://mcverticchio.github.io/2.2-sass-bootstrap/" className="thumbnail">
-//     </a>
-// </div>

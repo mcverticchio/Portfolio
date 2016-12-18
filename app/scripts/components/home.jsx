@@ -39,7 +39,7 @@ var HomeContainer = React.createClass({
             <div className="col-md-12 myWorkSection">
               <div className="col-xs-6 col-md-4 thumb">
                 <a href="https://mcverticchio.github.io/1.2-octocats/" className="thumbnail">
-                  <img src="images/octocat1.png" alt="..." />
+                  <img className="myImage" src="images/octocat1.png" alt="..." />
                 </a>
               </div>
 

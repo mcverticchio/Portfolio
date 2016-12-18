@@ -23,9 +23,12 @@ var HomeContainer = React.createClass({
             </div>
             <div className="col-sm-9 col-xs-6">
               <div className="welcomeSection">
-                <span>Welcome!</span>
-                <p className="description">I am a front-end devleoper and lorem ipsum.  I want to design cool things words words words words stuff.</p>
-              </div>
+                <span>Welcome,</span>
+                <p className="description">I am a front-end developer and lorem ipsum.  I want to design cool things words words words words stuff.</p>
+                <div className="col-md-4 contact"><i className="fa fa-envelope" aria-hidden="true"></i><span>Email</span></div>
+                <div className="col-md-4 contact"><i className="fa fa-phone" aria-hidden="true"></i><span>Telephone</span></div>
+                <div className="col-md-4 contact"><i className="fa fa-file" aria-hidden="true"></i><span>Resume</span></div>
+            </div>
             </div>
           </div>
         </div>

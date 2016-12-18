@@ -53,13 +53,14 @@ body {
   border-bottom: 2px solid rgba(109, 101, 101, 0.31);
   margin-bottom: 20px;
   .name {
+    color: black;
     margin-left: 30px;
     width: 10vw;
     display:inline-block;
     text-transform: uppercase;
   }
   .name:hover {
-    transition: color 0.2s ease;
+    transition: color ease 0.3s;
     color:#BF363D;
     cursor: pointer;
   }
@@ -98,20 +99,21 @@ body {
     margin-right:65px;
   }
   .links span:hover {
-    transition: color 0.2s ease;
+    transition: color ease 0.3s;
     cursor: pointer;
     color: #BF363D;
   }
 }
 
 .footer {
-  background-color: #2F2F2F;
+  border-top: 2px solid rgba(109, 101, 101, 0.31);
+  background-color: #F7F5F3;
   height: 70px;
   .fa {
     margin-top: 20px;
     font-size: 35px;
     text-align: center;
-    color: #FBFBFB;
+    color: rgba(109, 101, 101, 0.31);
   }
   .fa:hover {
     cursor: pointer;
@@ -175,7 +177,6 @@ body {
     background-size:475px;
     background-position: 30% 2%;
     position: relative;
-    left: 50px;
   }
   .profile.expand {
     width: 10em;
@@ -194,6 +195,21 @@ body {
     text-align: center;
     text-transform: none;
     letter-spacing: .1em;
+    // color: rgba(109, 101, 101, 0.31);
+  }
+  .contact {
+    font-size: 28px;
+    color: black;
+    margin-top: 30px;
+  }
+  .contact:hover {
+    color: #BF363D;
+    cursor: pointer;
+    transition: color ease 0.3s;
+  }
+  .contact span {
+    font-size: 20px;
+    padding-left: 10px;
   }
 }
 
@@ -204,7 +220,7 @@ body {
   .myWorkSection {
     background-color: white;
     padding-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .borderBottom {
     height: 2px;
@@ -240,3 +256,26 @@ body {
 }
 
 //################### RESUME SECTION STYLES ###############################################//
+
+.resumeSection {
+  margin-top: 80px;
+  h3 {
+    font-family: 'Gill Sans';
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+  ul {
+  font-family: 'Garamond';
+  color: #BF363D;
+  }
+  span {
+  color: black;
+  font-size: 15px;
+  }
+  h4{
+  font-family: 'Gill Sans';
+  font-size: 20px;
+  color: rgba(109, 101, 101, 0.31);
+  font-weight: lighter;
+  }
+}

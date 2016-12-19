@@ -9,15 +9,19 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 @font-face{
   font-family: 'ApplesScriptDemo';
   src: url('../fonts/ApplesScriptDemo.ttf');
+  font-family: 'Yrsa';
+  src: url('../fonts/ttf/Yrsa-Regular.ttf');
+  font-family:'YrsaLight';
+  src: url('../fonts/ttf/Yrsa-Light.ttf');
 }
 
 // Color Assignment
-$background: #DFDEE2;
-$purple: #5F5E6E;
-$blue: #A8BDC9;
-$darkpurple: #2f2f37;
-$green: #B5BFBC;
-
+$background: #F7F5F3;
+$border: #D6D8D9;
+$pink: #BF363D;
+$black: #2F2F2F;
+$resumegrey: #756B64;
+$white: #fbfbfa;
 
 
 *,
@@ -31,11 +35,13 @@ img {
 }
 
 body {
-  background-color: #F7F5F3;
+  background-color: $background;
   margin: 0px;
 }
 
 //################## TEMPLATE STYLES ###################################################//
+
+//*********************HEADER***********************************//
 .topContainer {
   position: fixed;
   width: 100vw;
@@ -44,16 +50,16 @@ body {
 }
 
 .header {
-  background-color: #F7F5F3;
-  // background-color: #2F2F2F;
+  background-color: $background;
+  // background-color: $$black;
   height: 80px;
   font-family: 'Oswald';
   font-size: 21px;
-  color: #2F2F2F;
-  border-bottom: 2px solid rgba(109, 101, 101, 0.31);
+  color: $black;
+  border-bottom: 2px solid $border;
   margin-bottom: 20px;
   .name {
-    color: black;
+    color: $black;
     margin-left: 30px;
     width: 10vw;
     display:inline-block;
@@ -61,7 +67,7 @@ body {
   }
   .name:hover {
     transition: color ease 0.3s;
-    color:#BF363D;
+    color:$pink;
     cursor: pointer;
   }
   .name img {
@@ -72,15 +78,14 @@ body {
     position: absolute;
     left: 110px;
     top: 20px;
-    font-size: 27px;
+    font-size: 23px;
     font-family: 'Gill Sans';
     font-weight: lighter;
     letter-spacing: .1em;
-    font-size: 27px;
   }
   .title {
-    color: #2F2F2F;
-    font-size: 20px;
+    color: $black;
+    font-size: 17px;
     font-family: 'Gill Sans';
     font-style: italic;
     text-transform: none;
@@ -90,8 +95,8 @@ body {
     float: right;
     font-family: 'Gill Sans';
     font-weight: lighter;
-    font-size: 20px;
-    color: rgba(109, 101, 101, 0.31);
+    font-size: 17px;
+    color: $border;
     letter-spacing: 0.1em;
     margin-top: 27px;
   }
@@ -101,30 +106,78 @@ body {
   .links span:hover {
     transition: color ease 0.3s;
     cursor: pointer;
-    color: #BF363D;
+    color: $pink;
   }
 }
 
+.contactSection {
+  background-color: white;
+  margin-bottom: 30px;
+  // padding: 50px;
+  text-align: center;
+  h3 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Gill Sans';
+    color: $black;
+    padding: 50px;
+    background: white;
+    letter-spacing: 0.1em;
+  }
+  .borderBottom {
+    height: 4px;
+    background-color:$border;
+    position: relative;
+    width: 70vw;
+    left: 139px;
+  }
+  .contact {
+    font-family: 'Gill Sans';
+    font-weight: lighter;
+    font-size: 28px;
+    color: $black;
+    // margin-top: 30px;
+    padding: 50px;
+  }
+  .contact:hover {
+    color: $pink;
+    cursor: pointer;
+    transition: color ease 0.3s;
+  }
+  .contact span {
+    font-size: 20px;
+    padding-left: 10px;
+    display: block;
+    text-transform: none;
+    // font-weight: bold;
+  }
+}
+
+//*********************FOOTER***********************************//
+
 .footer {
-  border-top: 2px solid rgba(109, 101, 101, 0.31);
-  background-color: #F7F5F3;
+  border-top: 2px solid $border;
+  background-color: $background;
   height: 70px;
   .fa {
     margin-top: 20px;
     font-size: 35px;
     text-align: center;
-    color: rgba(109, 101, 101, 0.31);
+    color: $border;
   }
   .fa:hover {
     cursor: pointer;
-    color: #BF363D;
+    color: $pink;
     transition: color 0.2s ease;
   }
 }
 
 
-
 //################## HOME PAGE STYLES ###################################################//
+
+
+//*********************INTRO SECTION***********************************//
 
 .introSection {
   margin-top: 50px;
@@ -134,15 +187,13 @@ body {
     margin-bottom: 0px;
     padding: 90px;
     letter-spacing:.1em;
-    color: #2F2F2F;
+    color: $black;
     height: 400px;
     // opacity: 0.9;
     text-align:center;
     display: table-cell;
     vertical-align: middle;
     padding-top: 150px;
-    border-bottom: 2px solid rgba(109, 101, 101, 0.31);
-    // background-color: #BF363D;
     background-image: url('../images/TesselatedImages.gif');
     background-size: cover;
     span {
@@ -163,15 +214,20 @@ body {
   }
 }
 
+//*********************MY DESCRIPTION SECTION***********************************//
+
+.myDescriptionContainer {
+  max-width: 1000px;
+}
 .myDescriptionSection {
-  background-color: white;
+  background-color: #fbfbfa;
   padding: 90px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   .profile {
     height: 150px;
     width: 150px;
-    border:4px solid black;
+    border:4px solid $black;
     border-radius: 50%;
     background-image: url('../images/profilePic.jpg');
     background-size:475px;
@@ -195,87 +251,177 @@ body {
     text-align: center;
     text-transform: none;
     letter-spacing: .1em;
-    // color: rgba(109, 101, 101, 0.31);
   }
   .contact {
     font-size: 28px;
-    color: black;
+    color: $black;
     margin-top: 30px;
   }
   .contact:hover {
-    color: #BF363D;
+    color: $pink;
     cursor: pointer;
     transition: color ease 0.3s;
   }
   .contact span {
-    font-size: 20px;
+    font-size: 18px;
     padding-left: 10px;
+    display: block;
+    text-transform: none;
   }
 }
 
 
 //################### PORTFOLIO SECTION STYLES ###############################################//
 
+.row .thumbnail {
+    border:0;
+    box-shadow:0;
+    border-radius:0;
+}
 .workContainer {
+  margin-top: 30px;
+  max-width: 1050px;
   .myWorkSection {
-    background-color: white;
-    padding-top: 50px;
+    background-color: $white;
+    padding: 50px 114px;
+    // padding-top: 50px;
+    // padding-bottom: 50px;
     margin-bottom: 30px;
   }
   .borderBottom {
-    height: 2px;
-    background-color:rgba(109, 101, 101, 0.31);
+    height: 4px;
+    background-color:$border;
     position: relative;
     top: 150px;
-    width: 80vw;
-    left: 70px;
+    width: 61vw;
+    left: 139px;
   }
   .myWorkTitle {
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Gill Sans';
-    color: #2F2F2F;
+    color: $black;
     padding: 50px;
-    background: white;
-    font-weight: lighter;
+    background: $white;
+    letter-spacing: 0.1em;
+  }
+  .thumb {
+    height: 20vw;
+    margin-bottom: 10px;
   }
   .thumbnail {
-    transition: all 0.5s ease;
+    height: 100%;
+    padding: 0px;
+    position: relative;
+    overflow:hidden;
   }
-  .thumbnail:hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 96, 172, 0.6);
-    transition: background-color 0.5s ease;
+  img {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+  .caption {
+    position:absolute;
+    top:0;
+    right:0;
+    background: rgba(0, 0, 0, 0);
+    width:100%;
+    height:100%;
+    display: block;
+    text-align:center;
+    z-index:2;
+    transition: all 0.3s ease;
+  }
+  .caption h4 {
+    font-family: 'Gill Sans';
+    color:rgba(0, 0, 0, 0);
+    text-transform: uppercase;
+    font-weight: lighter;
+    transition: color 0.3s ease;
+    margin-top: 100px;
+  }
+  .thumbnail:hover{
+    .caption {
+      background:rgba(191, 54, 61, 0.9);
+    }
+    .caption h4 {
+      color:white;
+    }
   }
 }
 
 //################### RESUME SECTION STYLES ###############################################//
 
 .resumeSection {
-  margin-top: 80px;
+  margin-top: 110px;
+  margin-bottom: 30px;
+  background-color: $white;
+  max-width: 960px;
+  padding: 40px;
+  padding-top: 30px;
   h3 {
     font-family: 'Gill Sans';
-    font-weight: lighter;
+    // font-weight: lighter;
     text-transform: uppercase;
+    color: $pink;
+    margin-bottom: 30px;
   }
   ul {
-  font-family: 'Garamond';
-  color: #BF363D;
+  font-family: 'Yrsa';
+  color: $pink;
   }
   span {
-  color: black;
-  font-size: 15px;
+  color: $black;
+  font-size: 17px;
   }
   h4{
   font-family: 'Gill Sans';
   font-size: 20px;
-  color: rgba(109, 101, 101, 0.31);
+  color: $resumegrey;
   font-weight: lighter;
+  }
+  h5 {
+    font-family: 'Gill Sans';
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .educationSection{
+    h4 span{
+      font-family: 'Gill Sans';
+      font-size: 20px;
+      color: $resumegrey;
+      font-weight: lighter;
+    }
+    .year {
+      font-family: 'Yrsa';
+      font-size: 17px;
+      color: $resumegrey;
+      float: right;
+    }
+  }
+  .skillSection {
+    span {
+      font-family: 'Yrsa';
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .skill {
+      margin-top: 15px;
+    }
+  }
+  .workSection {
+    h4 span{
+      font-family: 'Gill Sans';
+      font-size: 20px;
+      color: $resumegrey;
+      font-weight: lighter;
+    }
+    .year {
+      font-family: 'Yrsa';
+      font-size: 17px;
+      color: $resumegrey;
+      float: right;
+    }
   }
 }

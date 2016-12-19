@@ -12,7 +12,11 @@ var TemplateContainer = React.createClass({
   },
   handleWorkNav: function(e){
     e.preventDefault();
-    Backbone.history.navigate('work/', {trigger:true});
+    Backbone.history.navigate('#/#workLink', {trigger:true});
+  },
+  handleContactnNav: function(e){
+    e.preventDefault();
+    Backbone.history.navigate('#/#welcomeSection',{trigger:true});
   },
   render: function(){
     return (
@@ -24,7 +28,7 @@ var TemplateContainer = React.createClass({
               <div className="links">
                 <span onClick={this.handleWorkNav}>Portfolio</span>
                 <span onClick={this.handleResumeNav}>Resume</span>
-                <span>Contact</span>
+                <span onClick={this.handleContactnNav} >Contact</span>
               </div>
               <div className="line"></div>
             </header>
@@ -52,3 +56,13 @@ var TemplateContainer = React.createClass({
 module.exports = {
   TemplateContainer: TemplateContainer
 }
+
+// <div className="container">
+//   <div className="row contactSection">
+//     <h3>Contact Me</h3>
+//     <div className="borderBottom"></div>
+//       <div className="col-md-4 contact"><i className="fa fa-envelope" aria-hidden="true"></i><span>mcverticchio@gmail.com</span></div>
+//       <div className="col-md-4 contact"><i className="fa fa-phone" aria-hidden="true"></i><span>864.316.8588</span></div>
+//       <div className="col-md-4 contact"><i className="fa fa-file" aria-hidden="true"></i><span>Resume</span></div>
+//   </div>
+// </div>

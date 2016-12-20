@@ -12,7 +12,6 @@ var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'index',
     'resume/': 'resume',
-    'work/': 'work',
     'project/:id/': 'project'
   },
   index: function(){
@@ -24,12 +23,6 @@ var AppRouter = Backbone.Router.extend({
   resume: function(){
     ReactDOM.render(
       React.createElement(ResumeContainer),
-      document.getElementById('app')
-    )
-  },
-  work: function(){
-    ReactDOM.render(
-      React.createElement(WorkContainer),
       document.getElementById('app')
     )
   },

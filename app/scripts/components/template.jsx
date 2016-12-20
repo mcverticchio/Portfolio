@@ -71,13 +71,3 @@ var TemplateContainer = React.createClass({
 module.exports = {
   TemplateContainer: TemplateContainer
 }
-
-// <div className="container">
-//   <div className="row contactSection">
-//     <h3>Contact Me</h3>
-//     <div className="borderBottom"></div>
-//       <div className="col-md-4 contact"><i className="fa fa-envelope" aria-hidden="true"></i><span>mcverticchio@gmail.com</span></div>
-//       <div className="col-md-4 contact"><i className="fa fa-phone" aria-hidden="true"></i><span>864.316.8588</span></div>
-//       <div className="col-md-4 contact"><i className="fa fa-file" aria-hidden="true"></i><span>Resume</span></div>
-//   </div>
-// </div>

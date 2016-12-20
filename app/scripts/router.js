@@ -4,7 +4,6 @@ var Backbone = require('backbone');
 var $ = require('jquery');
 
 var HomeContainer = require('./components/home.jsx').HomeContainer;
-var WorkContainer = require('./components/work.jsx').WorkContainer;
 var ResumeContainer = require('./components/resume.jsx').ResumeContainer;
 var SingleProjectContainer = require('./components/singleproject.jsx').SingleProjectContainer;
 

@@ -68,7 +68,7 @@ var ResumeContainer = React.createClass({
                 <ul>
                   <li><span>Templating: Underscore/Handlebars</span></li>
                   <li><span>Version Control: Git</span></li>
-                  <li><span>Design: Bootstrap /Adobe inDesign</span></li>
+                  <li><span>Design: Bootstrap /Adobe Creative Cloud</span></li>
                 </ul>
               </div>
             </div>
@@ -81,7 +81,8 @@ var ResumeContainer = React.createClass({
                 <h4>Medical Scribe <span className="year">01.2016 - 09.2016</span></h4>
                   <h5>Scribe America</h5>
                   <ul>
-                    <li><span>Documented the HPI, ROS, and Physical Examination</span></li>
+                    <li><span>Chart documentation (HPI, ROS, Physical Examination)</span></li>
+                    <li><span>Operated and navigated the Athena software system extensively</span></li>
                     <li><span>Located and reviewed tests/labwork</span></li>
                     <li><span>Observed and fostered relationships with doctors in different specialties (GI, Internal Medicine, Family Practice)</span></li>
                   </ul>

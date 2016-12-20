@@ -6,16 +6,18 @@ var $ = require('jquery');
 var HomeContainer = require('./components/home.jsx').HomeContainer;
 var WorkContainer = require('./components/work.jsx').WorkContainer;
 var ResumeContainer = require('./components/resume.jsx').ResumeContainer;
+var SingleProjectContainer = require('./components/singleproject.jsx').SingleProjectContainer;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'index',
     'resume/': 'resume',
-    'work/': 'work'
+    'work/': 'work',
+    'project/:id/': 'project'
   },
   index: function(){
     ReactDOM.render(
-      React.createElement(HomeContainer),
+      React.createElement(HomeContainer, {router: this}),
       document.getElementById('app')
     )
   },
@@ -28,6 +30,12 @@ var AppRouter = Backbone.Router.extend({
   work: function(){
     ReactDOM.render(
       React.createElement(WorkContainer),
+      document.getElementById('app')
+    )
+  },
+  project: function(id){
+    ReactDOM.render(
+      React.createElement(SingleProjectContainer, {id: id}),
       document.getElementById('app')
     )
   }

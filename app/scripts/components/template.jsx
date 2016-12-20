@@ -1,5 +1,6 @@
 var React = require('react');
 var Backbone = require('backbone');
+var HomeContainer = require('./home.jsx').HomeContainer;
 
 var TemplateContainer = React.createClass({
   handleHomeNav: function(e){
@@ -14,10 +15,24 @@ var TemplateContainer = React.createClass({
     e.preventDefault();
     Backbone.history.navigate('#/#workLink', {trigger:true});
   },
-  handleContactnNav: function(e){
+  handleContactNav: function(e){
     e.preventDefault();
     Backbone.history.navigate('#/#welcomeSection',{trigger:true});
   },
+  componentDidMount() {
+  // Decode entities in the URL
+  // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
+  window.location.hash = window.decodeURIComponent(window.location.hash);
+  const scrollToAnchor = () => {
+    const hashParts = window.location.hash.split('#');
+    if (hashParts.length > 2) {
+      const hash = hashParts.slice(-1)[0];
+      document.querySelector(`#${hash}`).scrollIntoView();
+    }
+  };
+  scrollToAnchor();
+  window.onhashchange = scrollToAnchor;
+},
   render: function(){
     return (
       <div>
@@ -26,7 +41,7 @@ var TemplateContainer = React.createClass({
             <header>
               <div onClick={this.handleHomeNav} className="name"><img src="images/logo3.svg" /><span className="myName">Caroline Verticchio/<span className="title">Front-End Developer</span></span></div>
               <div className="links">
-                <span onClick={this.handleWorkNav}>Portfolio</span>
+                <a href="#/#workLink"><span>Portfolio</span></a>
                 <span onClick={this.handleResumeNav}>Resume</span>
                 <span onClick={this.handleContactnNav} >Contact</span>
               </div>

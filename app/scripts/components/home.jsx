@@ -1,9 +1,29 @@
 var React = require('react');
 var Backbone = require('backbone');
 var Template = require('./template.jsx').TemplateContainer;
+var projects = require('../projects/myproject.js').projects;
 
 var HomeContainer = React.createClass({
+  // handleClick: function(project){
+  //   // e.preventDefault();
+  //   var router = this.props.router;
+  //   // console.log(project);
+  //   router.navigate('projects/' + project.id + '/', {trigger:true});
+  // },
   render: function(){
+    var self = this;
+    var oneProject = projects.map(function(project){
+      return (
+        <a href={'#project/' + project.id + '/'} key={project.id} className="col-xs-6 col-md-4 thumb">
+          <div className="thumbnail">
+            <img className="myImage" src={project.img} alt="..." />
+            <div className="caption">
+              <h4>{project.title}</h4>
+            </div>
+          </div>
+        </a>
+      );
+    });
     return (
       <Template>
 
@@ -35,64 +55,12 @@ var HomeContainer = React.createClass({
 
         <div className="container workContainer">
           <div className="row">
-            <div className="col-md-12 myWorkTitle" name="workLink">
+            <a id="workLink"><div className="col-md-12 myWorkTitle" name="workLink">
               My Work
-            </div>
+            </div></a>
             <div className="borderBottom"></div>
             <div className="col-md-12 myWorkSection">
-              <div className="col-xs-6 col-md-4 thumb">
-                <a href="https://mcverticchio.github.io/1.2-octocats/" className="thumbnail">
-                  <img className="myImage" src="images/octocat1.png" alt="..." />
-                  <div className="caption">
-                    <h4>Octocats Gallery</h4>
-                  </div>
-                </a>
-              </div>
-
-              <div className="col-xs-6 col-md-4 thumb">
-                <a href="https://mcverticchio.github.io/1.4-pixel-perfect/" className="thumbnail">
-                  <img src="images/surfPaddle.png" alt="..." />
-                  <div className="caption">
-                    <h4>Surf and Paddle</h4>
-                  </div>
-                </a>
-              </div>
-
-              <div className="col-xs-6 col-md-4 thumb">
-                <a href="https://mcverticchio.github.io/2.2-sass-bootstrap/" className="thumbnail">
-                  <img src="images/skateboard.png" alt="..." />
-                  <div className="caption">
-                    <h4>Skateboard Brand Design Comp</h4>
-                  </div>
-                </a>
-              </div>
-
-              <div className="col-xs-6 col-md-4 thumb">
-                <a href="https://mcverticchio.github.io/4.4-Github-Recreation/" className="thumbnail">
-                  <img src="images/github.png" alt="..." />
-                  <div className="caption">
-                    <h4>Github Recreation</h4>
-                  </div>
-                </a>
-              </div>
-
-              <div className="col-xs-6 col-md-4 thumb">
-                <a href="https://mcverticchio.github.io/7.4-Majestic-Thai/" className="thumbnail">
-                  <img src="images/majesticThai.png" alt="..." />
-                  <div className="caption">
-                    <h4>Majestic Thai Restaurant Ordering App</h4>
-                  </div>
-                </a>
-              </div>
-
-              <div className="col-xs-6 col-md-4 thumb">
-                <a href="#" className="thumbnail">
-                  <img src="images/store.png" alt="..." />
-                  <div className="caption">
-                    <h4>Store to Door: Grocery Store Delivery App</h4>
-                  </div>
-                </a>
-              </div>
+              {oneProject}
             </div>
           </div>
         </div>
@@ -112,5 +80,51 @@ module.exports = {
 //   </div>
 //   <a href="#" className="thumbnail">
 //     <img src="images/HP.png" alt="..." />
+//   </a>
+// </div>
+
+
+// <div className="col-xs-6 col-md-4 thumb">
+//   <a href="https://mcverticchio.github.io/1.4-pixel-perfect/" className="thumbnail">
+//     <img src="images/surfPaddle.png" alt="..." />
+//     <div className="caption">
+//       <h4>Surf and Paddle</h4>
+//     </div>
+//   </a>
+// </div>
+//
+// <div className="col-xs-6 col-md-4 thumb">
+//   <a href="https://mcverticchio.github.io/2.2-sass-bootstrap/" className="thumbnail">
+//     <img src="images/skateboard.png" alt="..." />
+//     <div className="caption">
+//       <h4>Skateboard Brand Design Comp</h4>
+//     </div>
+//   </a>
+// </div>
+//
+// <div className="col-xs-6 col-md-4 thumb">
+//   <a href="https://mcverticchio.github.io/4.4-Github-Recreation/" className="thumbnail">
+//     <img src="images/github.png" alt="..." />
+//     <div className="caption">
+//       <h4>Github Recreation</h4>
+//     </div>
+//   </a>
+// </div>
+//
+// <div className="col-xs-6 col-md-4 thumb">
+//   <a href="https://mcverticchio.github.io/7.4-Majestic-Thai/" className="thumbnail">
+//     <img src="images/majesticThai.png" alt="..." />
+//     <div className="caption">
+//       <h4>Majestic Thai Restaurant Ordering App</h4>
+//     </div>
+//   </a>
+// </div>
+//
+// <div className="col-xs-6 col-md-4 thumb">
+//   <a href="#" className="thumbnail">
+//     <img src="images/store.png" alt="..." />
+//     <div className="caption">
+//       <h4>Store to Door: Grocery Store Delivery App</h4>
+//     </div>
 //   </a>
 // </div>

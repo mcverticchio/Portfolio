@@ -7,7 +7,8 @@ var ResumeContainer = React.createClass({
     return (
       <Template>
         <div className="container resumeSection">
-
+          <div className="resumeTitle">Resume</div>
+          <div className="borderBottom col-md-12 col-sm-12 col-xs-12"></div>
           <div className="row">
             <div className="col-md-12 educationSection">
               <h3>Education</h3>
@@ -108,6 +109,19 @@ var ResumeContainer = React.createClass({
             </div>
           </div>
 
+        </div>
+
+        <div className="container resumePDF">
+          <div className="row resumeHolder">
+            <div>
+              <a href="documents/resume.pdf">
+                <div className="col-sm-12 col-xs-12 contact">
+                  <i className="fa fa-file" aria-hidden="true"></i>
+                  <span>Download PDF</span>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </Template>
     )

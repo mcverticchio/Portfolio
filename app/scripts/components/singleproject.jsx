@@ -18,18 +18,23 @@ var SingleProjectContainer = React.createClass({
     });
 
     var individualProject = projectArr.map(function(project){
+      var techList = project.tech.join(', ');
+      var imageList = project.images.map(function(image){
+        return <img key={image} className="myImage" src={image} alt="image"/>
+      });
       return(
         <div key={project.id} className="col-md-12">
           <div className="col-md-5">
             <h3 className="projectTitle">{project.title}</h3>
             <p className="projectInfo">{project.description}</p>
-            <h4 className="techTitle">Tech Used</h4>
-              <ul className="tech"></ul>              //HOW TO ITERATE OVER EACH TECH ITEM AND DISPLAY AS SEPARATE LIST ITEM???
+            <h4 className="techTitle">Technical Toolbox
+            </h4>
+              <ul className="tech">{techList}</ul>
             <a className="link" href={project.live}><button className="btn btn-success">Live</button></a>
             <a className="link" href={project.code}><button className="btn btn-success codebtn">Code</button></a>
           </div>
           <div className="col-md-7 imageContainer">
-            <img className="myImage" src={project.images} alt="..." />  //THESE ARENT DISPLAYING IF THERE IS MORE THAN ONE,  HOW TO ITERATE OVER THESE??
+            {imageList}
           </div>
         </div>
       )

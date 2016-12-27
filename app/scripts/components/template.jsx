@@ -1,16 +1,12 @@
 var React = require('react');
 var Backbone = require('backbone');
 var HomeContainer = require('./home.jsx').HomeContainer;
+var Navbar = require('react-bootstrap').Navbar;
+var Nav = require('react-bootstrap').Nav;
+var NavItem = require('react-bootstrap').NavItem;
+var MenuItem = require('react-bootstrap').MenuItem;
 
 var TemplateContainer = React.createClass({
-  handleHomeNav: function(e){
-    e.preventDefault();
-    Backbone.history.navigate('', {trigger:true});
-  },
-  handleResumeNav: function(e){
-    e.preventDefault();
-    Backbone.history.navigate('resume/', {trigger:true});
-  },
   handleWorkNav: function(e){
     e.preventDefault();
     Backbone.history.navigate('#/#workLink', {trigger:true});
@@ -36,19 +32,30 @@ var TemplateContainer = React.createClass({
   render: function(){
     return (
       <div>
-        <div className="topContainer container-fluid">
-          <div className="row header">
-            <header>
-              <div onClick={this.handleHomeNav} className="name"><img src="images/logo3.svg" /><span className="myName">Caroline Verticchio/<span className="title">Front-End Developer</span></span></div>
-              <div className="links">
-                <a href="#/#workLink"><span>Portfolio</span></a>
-                <span onClick={this.handleResumeNav}>Resume</span>
-                <span onClick={this.handleContactnNav} >Contact</span>
-              </div>
-              <div className="line"></div>
-            </header>
-          </div>
-        </div>
+        <Navbar className="topContainer header" inverse collapseOnSelect>
+
+            <Navbar.Header className="navBarContainer">
+              <Navbar.Brand>
+                <a href="#"><img src="images/logo3.svg" /></a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+                <Nav>
+                  <NavItem className="nameDescHolder" href="#" className="name"><span className="myName">Caroline Verticchio/</span><span className="title">Front-end Developer</span></NavItem>
+                </Nav>
+            </Navbar.Header>
+
+            <Navbar.Collapse>
+
+              <Nav pullRight>
+                <NavItem className="link" eventKey={1} href="#resume/">Resume</NavItem>
+                <NavItem className="link" eventKey={2} href="#">Portfolio</NavItem>
+                <NavItem className="link" eventKey={3} href="#">Contact</NavItem>
+              </Nav>
+
+            </Navbar.Collapse>
+          </Navbar>
+
+
 
 
         {this.props.children}
@@ -57,10 +64,10 @@ var TemplateContainer = React.createClass({
         <div className="container-fluid">
           <div className="row footer">
             <div className="bottomLine"></div>
-            <a href="https://github.com/mcverticchio"><i className="col-md-3 fa fa-github" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile"><i className="col-md-3 fa fa-linkedin-square" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/caroline.verticchio"><i className="col-md-3 fa fa-facebook-square" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/"><i className="col-md-3 fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://github.com/mcverticchio"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/caroline.verticchio"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-twitter" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -71,3 +78,31 @@ var TemplateContainer = React.createClass({
 module.exports = {
   TemplateContainer: TemplateContainer
 }
+//
+// <div className="topContainer container-fluid">
+//   <div className="row header">
+//     <header>
+//       <div className="col-md-6 col-sm-6 col-xs-6">
+//       <div onClick={this.handleHomeNav} className="name"><img src="images/logo3.svg" /><span className="myName">Caroline Verticchio/<span className="title">Front-End Developer</span></span></div>
+//       </div>
+//       <div className="links col-md-6 col-sm-6 col-xs-6">
+//         <a href="#/#workLink"><span>Portfolio</span></a>
+//         <span onClick={this.handleResumeNav}>Resume</span>
+//         <span onClick={this.handleContactnNav} >Contact</span>
+//       </div>
+//       <div className="line"></div>
+//     </header>
+//   </div>
+// </div>
+
+
+// <div>
+//   <nav className="navbar navbar-default">
+//     <div className="container-fluid">
+//       <div className="navbar-header">
+//         <a className="navbar-brand" href="#">
+//           <img alt="Brand" src="images/logo3.svg" />
+//         </a>
+//       </div>
+//     </div>
+//   </nav>

@@ -250,7 +250,7 @@ body {
   .profile.expand {
     width: 10em;
   }
-  .welcomeSection {
+  #welcomeSection {
     font-family: 'Gill Sans';
     text-transform: uppercase;
     font-weight: lighter;
@@ -409,7 +409,11 @@ body {
     padding-top: 50px;
     background: #fff;
   }
-
+  .timline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
   .timeline ul li::after {
     content: '';
     position: absolute;
@@ -419,7 +423,11 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: inherit;
+    background: #fff;
+    transition: background 0.5s ease-in-out;
+  }
+  .timeline ul li.in-view::after{
+    background: #F45B69;
   }
   .timeline ul li div {
     position: relative;
@@ -427,6 +435,9 @@ body {
     width: 400px;
     padding: 15px;
     background: #ca444b;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
   }
 
   .timeline ul li div::before {
@@ -440,6 +451,7 @@ body {
 
   .timeline ul li:nth-child(odd) div {
     left: 45px;
+    transform: translate3d(200px,0,0);
   }
 
   .timeline ul li:nth-child(odd) div::before {
@@ -450,6 +462,7 @@ body {
 
   .timeline ul li:nth-child(even) div {
     left: -439px;
+    transform: translate3d(-200px,0,0);
   }
 
   .timeline ul li:nth-child(even) div::before {

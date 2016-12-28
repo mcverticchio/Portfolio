@@ -4,6 +4,18 @@ var Template = require('./template.jsx').TemplateContainer;
 var projects = require('../projects/myproject.js').projects;
 
 var HomeContainer = React.createClass({
+  isElementInViewport: function(el){
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  },
+  // callback: function(){
+  //
+  // }
   render: function(){
     var self = this;
     var oneProject = projects.map(function(project){
@@ -31,12 +43,12 @@ var HomeContainer = React.createClass({
         </div>
 
         <div className="container myDescriptionContainer">
-          <div className="row myDescriptionSection">
+          <div className="row myDescriptionSection" id="welcome">
             <div className="col-md-3 col-sm-4 col-xs-12">
               <div className="profile"></div>
             </div>
             <div className="col-md-9 col-sm-8 col-xs-12">
-              <div className="welcomeSection">
+              <div id="welcomeSection">
                 <span className="aboutMeTitle">About Me</span>
                 <div className="borderBottom col-md-12 col-sm-12 col-xs-12"></div>
                 <p className="description">I am from Spartanburg, South Carolina.  I love to be outdoors and explore new places. I have a passion for music and anything food related.  I have recently discovered a new passion for designing and creating applications.  After working in healthcare for a few years I realized my ambitions lie elsewhere and I discovered the coding world. Every day presents a new challenge and I   Please contact me if your company is looking for someone like me! </p>
@@ -52,7 +64,6 @@ var HomeContainer = React.createClass({
           <section className="timeline">
             <ul>
               <li>
-
                 <div>
                   <h4>USC</h4>
                   <time>2014 </time> I graduated from USC Columbia in 2014 with BS in Biology.  While in school I was apart of a national honor fraternity, participated in undergraduate research in the USC biology department, and studied abroad for a semester in Barcelona, Spain.
@@ -74,9 +85,10 @@ var HomeContainer = React.createClass({
           </section>
         </div>
 
+
         <div className="container workContainer">
           <div className="row">
-            <a id="workLink"><div className="col-md-12 myWorkTitle" name="workLink">
+            <a id="workLink"><div className="col-md-12 myWorkTitle">
               My Work
             </div></a>
             <div className="borderBottom"></div>
@@ -94,27 +106,3 @@ var HomeContainer = React.createClass({
 module.exports = {
   HomeContainer: HomeContainer
 }
-
-// <div className='container-fluid timelineSection'>
-//   <div className="row">
-//     <div className="tlPics col-md-12">
-//       <h4 className="col-md-4">2014</h4>
-//       <div className="col-md-4 usc"><img src="images/USC.gif"></img></div>
-//       <div className="uscDescription col-md-4"><h3>USC</h3>I graduated from USC Columbia
-// in 2014 with BS in Biology.  While in school I was apart of a national honor fraternity,
-// participated in undergraduate research in the USC biology department, and studied abroad for a
-// semester in Barcelona, Spain. </div>
-//     </div>
-//     <div className="tlPics col-md-12 middleSection">
-//       <div className="medDescription col-md-4"><h3>Healthcare</h3>For 2 years after graduation I worked in healthcare as a CNA and then a medical scribe.  I worked in hospital facilites and private offices. Taking care of people was incredibly rewarding for me and a phase of my life that I am truly proud of.</div>
-//       <div className="col-md-4 medical"><img src="images/medical.jpg"></img></div>
-//       <h4 className="col-md-4">2014-2016</h4>
-//     </div>
-//     <div className="tlPics col-md-12">
-//       <h4 className="col-md-4">2016</h4>
-//       <div className="col-md-4 tiy"><img src="images/tiy.png"></img></div>
-//       <div className="tiyDescription col-md-4"><h3>The Iron Yard</h3></div>
-//     </div>
-//     <div className="tlLine"></div>
-//   </div>
-// </div>

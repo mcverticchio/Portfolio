@@ -1,5 +1,6 @@
 var React = require('react');
 var Backbone = require('backbone');
+var $ = require('jquery');
 var HomeContainer = require('./home.jsx').HomeContainer;
 var Navbar = require('react-bootstrap').Navbar;
 var Nav = require('react-bootstrap').Nav;
@@ -7,28 +8,48 @@ var NavItem = require('react-bootstrap').NavItem;
 var MenuItem = require('react-bootstrap').MenuItem;
 
 var TemplateContainer = React.createClass({
+  handleHomeNav: function(e){
+    e.preventDefault();
+    Backbone.history.navigate('#', {trigger:true});
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500);
+  },
+  handleResumeNav: function(e){
+    e.preventDefault();
+    Backbone.history.navigate('#resume/', {trigger:true});
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500);
+  },
   handleWorkNav: function(e){
     e.preventDefault();
     Backbone.history.navigate('#/#workLink', {trigger:true});
+      $('html, body').animate({
+        scrollTop: $('#workLink').offset().top-85
+      }, 1500);
   },
   handleContactNav: function(e){
     e.preventDefault();
-    Backbone.history.navigate('#/#welcomeSection',{trigger:true});
+    Backbone.history.navigate('#/#welcome',{trigger:true});
+      $('html, body').animate({
+        scrollTop: $('#welcome').offset().top-85
+      }, 1500);
   },
-  componentDidMount() {
-  // Decode entities in the URL
-  // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
-  window.location.hash = window.decodeURIComponent(window.location.hash);
-  const scrollToAnchor = () => {
-    const hashParts = window.location.hash.split('#');
-    if (hashParts.length > 2) {
-      const hash = hashParts.slice(-1)[0];
-      document.querySelector(`#${hash}`).scrollIntoView();
-    }
-  };
-  scrollToAnchor();
-  window.onhashchange = scrollToAnchor;
-},
+//   componentDidMount() {
+//   // Decode entities in the URL
+//   // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
+//   window.location.hash = window.decodeURIComponent(window.location.hash);
+//   const scrollToAnchor = () => {
+//     const hashParts = window.location.hash.split('#');
+//     if (hashParts.length > 2) {
+//       const hash = hashParts.slice(-1)[0];
+//       document.querySelector(`#${hash}`).scrollIntoView();
+//     }
+//   };
+//   scrollToAnchor();
+//   window.onhashchange = scrollToAnchor;
+// },
   render: function(){
     return (
       <div>
@@ -40,16 +61,16 @@ var TemplateContainer = React.createClass({
               </Navbar.Brand>
               <Navbar.Toggle />
                 <Nav>
-                  <NavItem className="nameDescHolder" href="#" className="name"><span className="myName">Caroline Verticchio/</span><span className="title">Front-end Developer</span></NavItem>
+                  <NavItem className="nameDescHolder" href="#" className="name"><span onClick={this.handleHomeNav} className="myName">Caroline Verticchio/</span><span className="title">Front-end Developer</span></NavItem>
                 </Nav>
             </Navbar.Header>
 
             <Navbar.Collapse>
 
               <Nav pullRight>
-                <NavItem className="link" eventKey={1} href="#resume/">Resume</NavItem>
-                <NavItem className="link" eventKey={2} href="#">Portfolio</NavItem>
-                <NavItem className="link" eventKey={3} href="#">Contact</NavItem>
+                <NavItem onClick={this.handleResumeNav} className="link" eventKey={1}>Resume</NavItem>
+                <NavItem onClick={this.handleWorkNav} className="link" eventKey={2}>Portfolio</NavItem>
+                <NavItem onClick={this.handleContactNav} className="link" eventKey={3}>Contact</NavItem>
               </Nav>
 
             </Navbar.Collapse>

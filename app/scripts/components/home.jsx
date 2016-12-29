@@ -80,7 +80,7 @@ var HomeContainer = React.createClass({
             <ul>
               <li>
                 <div>
-                  <div className="timelineImage"><img src="images/USC.gif"></img></div>
+                  <img src="images/USC.gif" />
                   <h4>USC</h4>
                   <time>2014 </time>
                   <span className="timelineContent">
@@ -91,7 +91,7 @@ var HomeContainer = React.createClass({
               </li>
               <li>
                 <div>
-                  <div className="timelineImage medical"><img src="images/medical.jpg"></img></div>
+                  <img src="images/medical.jpg"></img>
                   <h4>Healthcare</h4>
                   <time>2014-2016 </time> For 2 years after graduation I worked in healthcare as a CNA and then as a medical scribe.
                     I worked in hospital facilites and private offices. Taking care of people was incredibly rewarding for me and a phase
@@ -100,7 +100,7 @@ var HomeContainer = React.createClass({
               </li>
               <li>
                 <div>
-                  <div className="timelineImage"><img src="images/tiy.png"></img></div>
+                  <img src="images/tiy.png"></img>
                   <h4>The Iron Yard</h4>
                   <time>2016</time> I enrolled in the Iron Yard Front-end Engineering Program in September, 2016.
                     While at the Greenville campus, I tackled new challenges daily and built many small web applications.

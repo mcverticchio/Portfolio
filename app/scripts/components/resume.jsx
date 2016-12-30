@@ -35,7 +35,6 @@ var ResumeContainer = React.createClass({
               <ul>
                 <li><span>Palmetto Fellows Scholarship Recipient</span></li>
                 <li><span>Dean’s Scholarship Recipient</span></li>
-                <li><span>Dean’s Scholarship Recipient</span></li>
                 <li><span>USC Dean’s List Recipient</span></li>
                 <li><span>USC President’s List Recipient</span></li>
               </ul>

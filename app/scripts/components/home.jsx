@@ -80,13 +80,12 @@ var HomeContainer = React.createClass({
             <ul>
               <li>
                 <div>
-                  <img src="images/USC.gif" />
-                  <h4>USC</h4>
-                  <time>2014 </time>
-                  <span className="timelineContent">
-                    I graduated from USC Columbia in 2014 with BS in Biology.  While in school I was apart of a national honor fraternity,
-                    participated in undergraduate research in the USC biology department, and studied abroad for a semester in Barcelona, Spain.
-                  </span>
+                  <img src="images/tiy.png"></img>
+                  <h4>The Iron Yard</h4>
+                  <time>2016</time> I enrolled in the Iron Yard Front-end Engineering Program in September, 2016.
+                    While at the Greenville campus, I tackled new challenges daily and built many small web applications.
+                    After 3 months of hard work, I presented my final project in partnership with a back end engineer at Demo Day.
+                    The Iron Yard gave me a solid coding foundation and the understanding of how to continue learning.
                 </div>
               </li>
               <li>
@@ -100,12 +99,13 @@ var HomeContainer = React.createClass({
               </li>
               <li>
                 <div>
-                  <img src="images/tiy.png"></img>
-                  <h4>The Iron Yard</h4>
-                  <time>2016</time> I enrolled in the Iron Yard Front-end Engineering Program in September, 2016.
-                    While at the Greenville campus, I tackled new challenges daily and built many small web applications.
-                    After 3 months of hard work, I presented my final project in partnership with a back end engineer at Demo Day.
-                    The Iron Yard gave me a solid coding foundation and the understanding of how to continue learning.
+                  <img src="images/USC.gif" />
+                  <h4>USC</h4>
+                  <time>2014 </time>
+                  <span className="timelineContent">
+                    I graduated from USC Columbia in 2014 with BS in Biology.  While in school I was apart of a national honor fraternity,
+                    participated in undergraduate research in the USC biology department, and studied abroad for a semester in Barcelona, Spain.
+                  </span>
                 </div>
               </li>
             </ul>

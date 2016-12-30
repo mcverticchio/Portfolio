@@ -57,11 +57,11 @@ var TemplateContainer = React.createClass({
 
             <Navbar.Header className="navBarContainer">
               <Navbar.Brand>
-                <a href="#"><img src="images/logo3.svg" /></a>
+                <a><img src="images/logo3.svg" /></a>
               </Navbar.Brand>
               <Navbar.Toggle />
                 <Nav>
-                  <NavItem className="nameDescHolder" href="#" className="name"><span onClick={this.handleHomeNav} className="myName">Caroline Verticchio/</span><span className="title">Front-end Developer</span></NavItem>
+                  <NavItem onClick={this.handleHomeNav} className="nameDescHolder" href="#" className="name"><span className="myName">Caroline Verticchio/</span><span className="title">Front-end Developer</span></NavItem>
                 </Nav>
             </Navbar.Header>
 
@@ -99,31 +99,3 @@ var TemplateContainer = React.createClass({
 module.exports = {
   TemplateContainer: TemplateContainer
 }
-//
-// <div className="topContainer container-fluid">
-//   <div className="row header">
-//     <header>
-//       <div className="col-md-6 col-sm-6 col-xs-6">
-//       <div onClick={this.handleHomeNav} className="name"><img src="images/logo3.svg" /><span className="myName">Caroline Verticchio/<span className="title">Front-End Developer</span></span></div>
-//       </div>
-//       <div className="links col-md-6 col-sm-6 col-xs-6">
-//         <a href="#/#workLink"><span>Portfolio</span></a>
-//         <span onClick={this.handleResumeNav}>Resume</span>
-//         <span onClick={this.handleContactnNav} >Contact</span>
-//       </div>
-//       <div className="line"></div>
-//     </header>
-//   </div>
-// </div>
-
-
-// <div>
-//   <nav className="navbar navbar-default">
-//     <div className="container-fluid">
-//       <div className="navbar-header">
-//         <a className="navbar-brand" href="#">
-//           <img alt="Brand" src="images/logo3.svg" />
-//         </a>
-//       </div>
-//     </div>
-//   </nav>

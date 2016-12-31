@@ -62,11 +62,11 @@ var HomeContainer = React.createClass({
             <div className="col-md-3 col-sm-4 col-xs-12">
               <div className="profile"></div>
             </div>
-            <div className="col-md-9 col-sm-8 col-xs-12">
+            <div className="about col-md-9 col-sm-8 col-xs-12">
               <div id="welcomeSection">
                 <span className="aboutMeTitle">About Me</span>
                 <div className="borderBottom col-md-12 col-sm-12 col-xs-12"></div>
-                <p className="description">I am from Spartanburg, South Carolina.  I love to be outdoors and explore new places. I have a passion for music and anything food related.  I have recently discovered a new passion for designing and creating web applications.  After working in healthcare for a few years I realized my ambitions lie elsewhere and I discovered the coding world. Every day presents a new challenge and I am excited to continue learning and expanding my programming skills. Please contact me if your company is looking for someone like me! </p>
+                <p className="description col-xs-12">I am from Spartanburg, South Carolina.  I love to be outdoors and explore new places. I have a passion for music and anything food related.  I have recently discovered a new passion for designing and creating web applications.  After working in healthcare for a few years I realized my ambitions lie elsewhere and I discovered the coding world. Every day presents a new challenge and I am excited to continue learning and expanding my programming skills. Please contact me if your company is looking for someone like me! </p>
                 <a href="mailto:mcverticchio@gmail.com?subject=Hello!"><div name="welcomeArea" className="col-md-4 col-sm-12 col-xs-12 contact"><i className="fa fa-envelope" aria-hidden="true"></i><span>mcverticchio@gmail.com</span></div></a>
                 <div className="col-md-4 col-sm-12 col-xs-12 contact"><i className="fa fa-phone" aria-hidden="true"></i><span>864.316.8588</span></div>
                 <a href="documents/resume.pdf"><div className="col-md-4 col-sm-12 col-xs-12 contact"><i className="fa fa-file" aria-hidden="true"></i><span>Resume</span></div> </a>

@@ -258,6 +258,9 @@ body {
   background-color: #fbfbfa;
   padding: 60px;
   margin-top: 30px;
+  @media(max-width: 400px){
+    padding: 30px;
+  }
   .profile {
     height: 150px;
     width: 150px;
@@ -519,6 +522,9 @@ body {
     padding: 50px;
     background: $white;
     letter-spacing: 0.1em;
+  }
+  a:hover {
+    text-decoration: none;
   }
   .thumb {
     height: 229px;

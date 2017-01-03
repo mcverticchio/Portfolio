@@ -58,6 +58,9 @@ body {
   .header .container {
     max-width: 1050px;
   }
+  .navbar {
+
+  }
   .navbar-brand {
     width: 66px;
     padding: 0px;
@@ -99,6 +102,9 @@ body {
     @media(max-width: 575px){
       font-size: 18px;
     }
+  }
+  .myName:onClick {
+
   }
   .title {
     color: #2F2F2F;
@@ -202,13 +208,15 @@ body {
     margin-bottom: 0px;
     letter-spacing:.1em;
     color: $black;
-    height: 29vw;
+    height: 35vw;
     text-align:center;
-    display: table-cell;
-    vertical-align: middle;
-    padding-top: 1vw;
+    display:table;
     opacity: 0.99;
     background: $pink;
+    .introWords {
+      display: table-cell;
+      vertical-align: middle;
+    }
     span {
       // position:absolute;
       font-family: 'Gill Sans';
@@ -239,9 +247,9 @@ body {
     height: 100%;
     z-index: -1;
     opacity: 0.8;
-    background-image: url('../images/flower.jpg');
+    background-image: url('../images/computer.jpg');
     background-repeat: no-repeat;
-    background-position: 28% 40%;
+    background-position: 28% 83%;
     background-size: cover;
     // background-image: url('../images/flower.jpg');
     // background-size: cover;
@@ -489,18 +497,18 @@ body {
 //################### PORTFOLIO SECTION STYLES ###############################################//
 
 
-.row .thumbnail {
-    border:0;
-    box-shadow:0;
-    border-radius:0;
-}
+// .row .thumbnail {
+//     border:0;
+//     box-shadow:0;
+//     border-radius:0;
+// }
 .workContainer {
   margin-top: 30px;
   max-width: 1050px;
   background-color: $white;
   margin-bottom: 30px;
   .myWorkSection {
-    padding: 50px 114px;
+    padding: 50px;
   }
   .borderBottom {
     height: 4px;
@@ -526,65 +534,111 @@ body {
   a:hover {
     text-decoration: none;
   }
-  .thumb {
-    height: 229px;
-    margin-bottom: 10px;
-    @media(max-width:767px){
-      height: auto;
-    }
-  }
-  .thumbnail {
-    height: 100%;
-    padding: 0px;
-    position: relative;
-    overflow:hidden;
-  }
-  img {
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-  }
-  .caption {
-    position:absolute;
-    top:0;
-    right:0;
-    background: rgba(0, 0, 0, 0);
-    width:100%;
-    height:100%;
-    display: table;
-    text-align:center;
-    z-index:2;
-    transition: all 0.3s ease;
-  }
-  .caption h4 {
-    font-family: 'Gill Sans';
-    color:rgba(0, 0, 0, 0);
-    text-transform: uppercase;
-    font-weight: lighter;
-    transition: color 0.3s ease;
-    display: table-cell;
-    vertical-align: middle;
-    // margin-top: 80px;
-    // @media(max-width: 767px){
-    //   margin-top: 180px;
-    // }
-    // @media(max-width: 767px){
-    //   margin-top: 180px;
-    // }
-    // @media(max-width: 480px){
-    //   margin-top: 50px;
-    // }
-  }
-  .thumbnail:hover{
-    .caption {
-      background:rgba(191, 54, 61, 0.9);
-      cursor: pointer;
-    }
-    .caption h4 {
-      color:white;
+  .gallery {
+      // width:100%;
+      height:316px;
+      position: relative;
+  		padding: 15px;
+  		// margin: 0;
+  		text-align: center;
+      @media(max-width: 767px){
+        height: auto;
+      }
+  	}
+
+  	.gallery-image{
       cursor:pointer;
+  		position: relative;
+  		display: block;
+  	}
+
+    img {
+      height: 100%;
+      width: 100%;
     }
-  }
+
+  	.gallery-text{
+  	    position: absolute;
+  	    top: 0; right: 0;
+  	    bottom: 0; left: 0;
+  	    // width: 300px;
+        width: inherit;
+  	    height: 100%;
+  	    text-align: center;
+  	    background-color: rgba(191, 54, 61,0.9);
+  	    opacity: 0;
+  	    -webkit-transition: opacity 0.6s;
+  	    -moz-transition: opacity 0.6s;
+  	    transition: opacity 0.6s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:0;
+        height: 100%;
+        width: 100%;
+  	}
+
+  	.gallery-text:hover{
+  	    opacity: 1;
+  	}
+
+  	.gallery-text h3{
+        font-family: 'Gill Sans';
+        color:white;
+        text-transform: uppercase;
+        font-weight: lighter;
+  	    display: inline-table;
+        vertical-align:middle;
+        line-height:100%;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        height: 10rem;
+        @media(max-width: 470px){
+          font-size: 18px;
+        }
+  	}
+
+  // .gallery {
+  //   position:relative;
+  // //   // padding: 0;
+  // //   // margin: 0;
+  //   text-align: center;
+  //   height: 300px;
+  //   .gallery-image {
+  //     cursor: pointer;
+  //     position: relative;
+  //     display: block;
+  //   }
+  //   .caption {
+  //     position: absolute;
+  //     top: 0; right: 0;
+  //     bottom: 0; left: 0;
+  //     // width: inherit;
+  //     // height: 300px;
+  //     text-align: center;
+  //     background-color: $pink;
+  //     opacity: 0;
+  //     -moz-transition: opacity 0.3s ease;
+  //     transition: opacity 0.3s ease;
+  //     vertical-align: middle;
+  //     line-height: 200px;
+  //     padding: 10px;
+  //   }
+  //   .caption:hover {
+  //     opacity: 0.9;
+  //   }
+  //   .caption h4 {
+  //     position: absolute;
+  //     font-family: 'Gill Sans';
+  //     color:white;
+  //     text-transform: uppercase;
+  //     font-weight: lighter;
+  //     display: inline-table;
+  //     vertical-align: middle;
+  //     line-height: 100%;
+  //   }
+  // }
 }
 
 

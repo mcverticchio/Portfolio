@@ -36,20 +36,6 @@ var TemplateContainer = React.createClass({
         scrollTop: $('#welcome').offset().top-85
       }, 1500);
   },
-//   componentDidMount() {
-//   // Decode entities in the URL
-//   // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
-//   window.location.hash = window.decodeURIComponent(window.location.hash);
-//   const scrollToAnchor = () => {
-//     const hashParts = window.location.hash.split('#');
-//     if (hashParts.length > 2) {
-//       const hash = hashParts.slice(-1)[0];
-//       document.querySelector(`#${hash}`).scrollIntoView();
-//     }
-//   };
-//   scrollToAnchor();
-//   window.onhashchange = scrollToAnchor;
-// },
   render: function(){
     return (
       <div>
@@ -85,10 +71,10 @@ var TemplateContainer = React.createClass({
         <div className="container-fluid">
           <div className="row footer">
             <div className="bottomLine"></div>
-            <a href="https://github.com/mcverticchio"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-github" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-linkedin-square" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/caroline.verticchio"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-facebook-square" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://github.com/mcverticchio" target="_blank"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile" target="_blank"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/caroline.verticchio" target="_blank"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i className="col-md-3 col-sm-3 col-xs-3 fa fa-twitter" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>

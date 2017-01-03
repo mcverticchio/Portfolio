@@ -35,14 +35,16 @@ var HomeContainer = React.createClass({
     var self = this;
     var oneProject = projects.map(function(project){
       return (
-        <div className="gallery col-md-4 col-sm-6">
-          <div className="gallery-image" key={project.id}>
-            <img src={project.img}/>
-            <div className="gallery-text">
-              <h3>{project.title}</h3>
+        <a href={'#project/' + project.id + '/'}  key={project.id}>
+          <div className="gallery col-md-4 col-sm-6">
+            <div className="gallery-image">
+              <img src={project.img}/>
+              <div className="gallery-text">
+                <h3>{project.title}</h3>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       );
     });
     return (

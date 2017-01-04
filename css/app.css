@@ -5891,17 +5891,14 @@ body {
       text-align: center;
       border-radius: 50%;
       margin: 0px 5px; }
-    .footer .followMe .fa-linkedin-square {
+    .footer .followMe .fa-linkedin-square:hover {
       background: #2673B0; }
-    .footer .followMe .fa-facebook-square {
+    .footer .followMe .fa-facebook-square:hover {
       background: #3B5998; }
-    .footer .followMe .fa-twitter {
+    .footer .followMe .fa-twitter:hover {
       background: #1DA0F0; }
-    .footer .followMe .fa-medium {
+    .footer .followMe .fa-medium:hover {
       background: #33E051; }
-    .footer .followMe i:hover {
-      border: 3px solid #2F2F2F;
-      line-height: 35px; }
 
 .introSection {
   margin-top: 80px; }
@@ -6014,18 +6011,26 @@ body {
   .contact .contactBlock {
     text-align: left;
     display: inline-block; }
+  .contact .iContainer {
+    display: inline-block; }
+    @media (max-width: 419px) {
+      .contact .iContainer {
+        display: block;
+        text-align: center; } }
   .contact h3 {
     font-family: 'Gill Sans';
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    text-align: center; }
-  .contact h3 {
     text-align: left;
     text-transform: none;
     font-weight: lighter;
     display: inline-block;
     font-size: 18px;
     color: #A39D9D; }
+    @media (max-width: 419px) {
+      .contact h3 {
+        display: block;
+        text-align: center; } }
   .contact i {
     color: white;
     background: #2F2F2F;

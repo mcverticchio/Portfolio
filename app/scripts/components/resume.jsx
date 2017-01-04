@@ -30,18 +30,6 @@ var ResumeContainer = React.createClass({
           </div>
 
           <div className="row">
-            <div className="col-sm-12 honorSection">
-              <h3>Honors/Awards</h3>
-              <ul>
-                <li><span>Palmetto Fellows Scholarship Recipient</span></li>
-                <li><span>Dean’s Scholarship Recipient</span></li>
-                <li><span>USC Dean’s List Recipient</span></li>
-                <li><span>USC President’s List Recipient</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="row">
             <div className="col-sm-12 skillSection">
               <h3>Dev. Skills & Experience</h3>
               <h4>The Iron Yard-- Greenville, SC</h4>
@@ -54,6 +42,7 @@ var ResumeContainer = React.createClass({
                   <li><span>JavaScript/jQuery</span></li>
                   <li><span>HTML 5</span></li>
                   <li><span>CSS3/SASS</span></li>
+                  <li><span>Django/Python</span></li>
                 </ul>
               </div>
               <div className="col-md-4 skill">
@@ -108,6 +97,18 @@ var ResumeContainer = React.createClass({
             </div>
           </div>
 
+          <div className="row">
+            <div className="col-sm-12 honorSection">
+              <h3>Honors/Awards</h3>
+              <ul>
+                <li><span>Palmetto Fellows Scholarship Recipient</span></li>
+                <li><span>Dean’s Scholarship Recipient</span></li>
+                <li><span>USC Dean’s List Recipient</span></li>
+                <li><span>USC President’s List Recipient</span></li>
+              </ul>
+            </div>
+          </div>
+
         </div>
 
         <div className="container resumePDF">
@@ -115,7 +116,7 @@ var ResumeContainer = React.createClass({
             <div>
               <a href="documents/resume.pdf" target="_blank">
                 <div className="col-sm-12 col-xs-12 contact">
-                  <i className="fa fa-file" aria-hidden="true"></i>
+                  <i className="fa fa-file pdfFile" aria-hidden="true"></i>
                   <span>Download PDF</span>
                 </div>
               </a>

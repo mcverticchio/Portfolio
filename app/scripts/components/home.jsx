@@ -63,17 +63,22 @@ var HomeContainer = React.createClass({
 
         <div className="container myDescriptionContainer">
           <div className="row myDescriptionSection" id="welcome">
-            <div className="col-md-3 col-sm-4 col-xs-12">
+            <div className="col-md-3 col-sm-4 col-xs-12 myPicture">
               <div className="profile"></div>
             </div>
             <div className="about col-md-9 col-sm-8 col-xs-12">
               <div id="welcomeSection">
-                <span className="aboutMeTitle">About Me</span>
+                <h3 className="aboutMeTitle">About Me</h3>
                 <div className="borderBottom col-md-12 col-sm-12 col-xs-12"></div>
                 <p className="description col-xs-12">I am from Spartanburg, South Carolina.  I love to be outdoors and explore new places. I have a passion for music and anything food related.  I have recently discovered a new passion for designing and creating web applications.  After working in healthcare for a few years I realized my ambitions lie elsewhere and I discovered the coding world. Every day presents a new challenge and I am excited to continue learning and expanding my programming skills. Please contact me if your company is looking for someone like me! </p>
-                <a href="mailto:mcverticchio@gmail.com?subject=Hello!"><div name="welcomeArea" className="col-md-4 col-sm-12 col-xs-12 contact"><i className="fa fa-envelope" aria-hidden="true"></i><span>mcverticchio@gmail.com</span></div></a>
-                <a href="tel:864-316-8588"><div className="col-md-4 col-sm-12 col-xs-12 contact"><i className="fa fa-phone" aria-hidden="true"></i><span>864.316.8588</span></div></a>
-                <a href="documents/resume.pdf" target="_blank"><div className="col-md-4 col-sm-12 col-xs-12 contact"><i className="fa fa-file" aria-hidden="true"></i><span>Resume</span></div> </a>
+                  <div className="contact">
+                    <div className="contactBlock">
+                      <div className="oneContact"><a href="tel:864-316-8588"><i className="fa fa-phone" aria-hidden="true"></i><h3>864.316.8588</h3></a></div>
+                      <div className="oneContact"><a href="mailto:mcverticchio@gmail.com?subject=Hello!"><i className="fa fa-envelope" aria-hidden="true"></i><h3>mcverticchio@gmail.com</h3></a></div>
+                      <div className="oneContact"><a href="https://github.com/mcverticchio" target="_blank"><i className="fa fa-github" aria-hidden="true"></i><h3>github.com/mcverticchio</h3></a></div>
+                      <div className="oneContact"><a href="documents/resume.pdf" target="_blank"><i className="fa fa-file" aria-hidden="true"></i><h3>Resume</h3></a></div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>

@@ -36,6 +36,38 @@ body {
   margin: 0px;
   overflow-x: hidden;
 }
+// .col-xs-15,
+// .col-sm-15,
+// .col-md-15,
+// .col-lg-15 {
+//     position: relative;
+//     min-height: 1px;
+//     padding-right: 10px;
+//     padding-left: 10px;
+// }
+// .col-xs-15 {
+//     width: 20%;
+//     float: left;
+// }
+// @media (min-width: 768px) {
+// .col-sm-15 {
+//         width: 20%;
+//         float: left;
+//     }
+// }
+// @media (min-width: 992px) {
+//     .col-md-15 {
+//         width: 20%;
+//         float: left;
+//     }
+// }
+// @media (min-width: 1200px) {
+//     .col-lg-15 {
+//         width: 20%;
+//         float: left;
+//     }
+// }
+
 
 //################## TEMPLATE STYLES ###################################################//
 
@@ -58,14 +90,6 @@ body {
   .header .container {
     max-width: 1050px;
   }
-  .navbar {
-
-  }
-  .navbar-brand {
-    width: 66px;
-    padding: 0px;
-    margin-top: 20px;
-  }
   .navbar-collapse {
     margin-top: 15px;
   }
@@ -86,7 +110,7 @@ body {
     position: relative;
     left: -40px;
     @media(max-width: 767px){
-      left: -25px;
+      left: 25px;
       top: 5px;
     }
   }
@@ -112,13 +136,12 @@ body {
     font-family: 'Yrsa';
     text-transform: none;
     font-style: italic;
+    font-weight: bold;
     @media(max-width:575px){
       font-size: 15px;
     }
     @media(max-width: 495px){
       display: block;
-      // position: relative;
-      // left: 15px;
     }
   }
   @media (max-width: 991px) {
@@ -179,17 +202,44 @@ body {
 .footer {
   border-top: 2px solid $border;
   background-color: $background;
-  height: 70px;
-  .fa {
-    margin-top: 20px;
-    font-size: 35px;
+  .followMe {
     text-align: center;
-    color: $border;
-  }
-  .fa:hover {
-    cursor: pointer;
-    color: $pink;
-    transition: color 0.2s ease;
+    padding-bottom: 30px;
+    h2 {
+      font-family: 'Gill Sans';
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding-bottom: 30px;
+    }
+    i {
+      color: white;
+      background: $grey;
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      line-height: 41px;
+      vertical-align: middle;
+      text-align: center;
+      border-radius: 50%;
+      // margin-right:5px;
+      margin:0px 5px;;
+    }
+    .fa-linkedin-square {
+      background: #2673B0;
+    }
+    .fa-facebook-square {
+      background: #3B5998;
+    }
+    .fa-twitter {
+      background: #1DA0F0;
+    }
+    .fa-medium {
+      background: #33E051;
+    }
+    i:hover {
+      border: 3px solid $black;
+      line-height: 35px;
+    }
   }
 }
 
@@ -218,7 +268,6 @@ body {
       vertical-align: middle;
     }
     span {
-      // position:absolute;
       font-family: 'Gill Sans';
       font-size: 7vw;
       color: $white;
@@ -251,9 +300,6 @@ body {
     background-repeat: no-repeat;
     background-position: 28% 83%;
     background-size: cover;
-    // background-image: url('../images/flower.jpg');
-    // background-size: cover;
-    // background-position: 28% 44%;
   }
 }
 
@@ -264,7 +310,7 @@ body {
 }
 .myDescriptionSection {
   background-color: #fbfbfa;
-  padding: 60px;
+  padding: 30px 60px;
   margin-top: 30px;
   @media(max-width: 400px){
     padding: 30px;
@@ -283,15 +329,15 @@ body {
   .profile.expand {
     width: 10em;
   }
-  #welcomeSection {
-    font-family: 'Gill Sans';
-    text-transform: uppercase;
-    font-weight: lighter;
-    font-size: 30px;
-    text-align: center;
+  .myPicture {
+    padding: 105px 15px;
+    @media(max-width: 767px){
+      padding: 30px 15px;
+    }
   }
   .description {
     font-family: 'Yrsa';
+    font-weight: normal;
     font-size: 17px;
     text-align: center;
     text-transform: none;
@@ -303,30 +349,12 @@ body {
       padding: 0px;
     }
   }
-  .contact {
-    font-size: 28px;
-    color: $black;
-    margin-top: 30px;
-  }
-  .contact:hover {
-    color: $pink;
-    cursor: pointer;
-    transition: color ease 0.3s;
-  }
-  .contact span {
-    font-size: 15px;
-    padding-left: 10px;
-    display: block;
-    text-transform: none;
-    font-family: 'Gill Sans';
-  }
   .aboutMeTitle {
       font-size: 40px;
       text-align: center;
       text-transform: uppercase;
       font-family: 'Gill Sans';
       color: $black;
-      padding: 50px;
       letter-spacing: 0.1em;
       font-weight:normal;
       @media(max-width: 478px){
@@ -341,6 +369,54 @@ body {
     top: 5px;
   }
 }
+.contact {
+  padding:50px 0px;
+  text-align: center;
+  .contactBlock {
+    text-align: left;
+    display: inline-block;
+  }
+  h3 {
+    font-family: 'Gill Sans';
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+  h3 {
+    text-align: left;
+    text-transform: none;
+    font-weight: lighter;
+    display: inline-block;
+    font-size: 18px;
+    color: $grey;
+  }
+    i {
+      color: white;
+      background: $black;
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      line-height: 41px;
+      vertical-align: middle;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .oneContact:hover {
+      cursor: pointer;
+      i {
+        border: 3px solid $pink;
+        line-height:35px;
+        // background: $pink;
+        // transition:0.2s ease;
+      }
+      h3 {
+        color: $pink;
+        transition:0.2s ease;
+      }
+    }
+  }
+
 
 //################### TIMELINE SECTION STYLES ###############################################//
 //FOLLOWED EXAMPLE FROM https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 //
@@ -386,6 +462,7 @@ body {
     background: inherit;
   }
   .timeline ul li div {
+    border-radius: 5px;
     position: relative;
     bottom: 0;
     width: 400px;
@@ -496,19 +573,13 @@ body {
 
 //################### PORTFOLIO SECTION STYLES ###############################################//
 
-
-// .row .thumbnail {
-//     border:0;
-//     box-shadow:0;
-//     border-radius:0;
-// }
 .workContainer {
   margin-top: 30px;
   max-width: 1050px;
   background-color: $white;
   margin-bottom: 30px;
   .myWorkSection {
-    padding: 50px;
+    padding: 10px 50px;
   }
   .borderBottom {
     height: 4px;
@@ -535,11 +606,9 @@ body {
     text-decoration: none;
   }
   .gallery {
-      // width:100%;
       height:316px;
       position: relative;
   		padding: 15px;
-  		// margin: 0;
   		text-align: center;
       @media(max-width: 767px){
         height: auto;
@@ -561,7 +630,6 @@ body {
   	    position: absolute;
   	    top: 0; right: 0;
   	    bottom: 0; left: 0;
-  	    // width: 300px;
         width: inherit;
   	    height: 100%;
   	    text-align: center;
@@ -598,47 +666,6 @@ body {
           font-size: 18px;
         }
   	}
-
-  // .gallery {
-  //   position:relative;
-  // //   // padding: 0;
-  // //   // margin: 0;
-  //   text-align: center;
-  //   height: 300px;
-  //   .gallery-image {
-  //     cursor: pointer;
-  //     position: relative;
-  //     display: block;
-  //   }
-  //   .caption {
-  //     position: absolute;
-  //     top: 0; right: 0;
-  //     bottom: 0; left: 0;
-  //     // width: inherit;
-  //     // height: 300px;
-  //     text-align: center;
-  //     background-color: $pink;
-  //     opacity: 0;
-  //     -moz-transition: opacity 0.3s ease;
-  //     transition: opacity 0.3s ease;
-  //     vertical-align: middle;
-  //     line-height: 200px;
-  //     padding: 10px;
-  //   }
-  //   .caption:hover {
-  //     opacity: 0.9;
-  //   }
-  //   .caption h4 {
-  //     position: absolute;
-  //     font-family: 'Gill Sans';
-  //     color:white;
-  //     text-transform: uppercase;
-  //     font-weight: lighter;
-  //     display: inline-table;
-  //     vertical-align: middle;
-  //     line-height: 100%;
-  //   }
-  // }
 }
 
 
@@ -746,10 +773,13 @@ body {
     text-align: center;
   }
   i {
-    margin-right: 10px;
+    margin-right: 0px;
+    background:rgba(0, 0, 0, 0);
+    color: #83252A;
   }
   .contact:hover {
     color: $white;
+
   }
 }
 .resumeHolder:hover {

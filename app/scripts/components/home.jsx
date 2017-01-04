@@ -73,10 +73,25 @@ var HomeContainer = React.createClass({
                 <p className="description col-xs-12">I am from Spartanburg, South Carolina.  I love to be outdoors and explore new places. I have a passion for music and anything food related.  I have recently discovered a new passion for designing and creating web applications.  After working in healthcare for a few years I realized my ambitions lie elsewhere and I discovered the coding world. Every day presents a new challenge and I am excited to continue learning and expanding my programming skills. Please contact me if your company is looking for someone like me! </p>
                   <div className="contact">
                     <div className="contactBlock">
-                      <div className="oneContact"><a href="tel:864-316-8588"><i className="fa fa-phone" aria-hidden="true"></i><h3>864.316.8588</h3></a></div>
-                      <div className="oneContact"><a href="mailto:mcverticchio@gmail.com?subject=Hello!"><i className="fa fa-envelope" aria-hidden="true"></i><h3>mcverticchio@gmail.com</h3></a></div>
-                      <div className="oneContact"><a href="https://github.com/mcverticchio" target="_blank"><i className="fa fa-github" aria-hidden="true"></i><h3>github.com/mcverticchio</h3></a></div>
-                      <div className="oneContact"><a href="documents/resume.pdf" target="_blank"><i className="fa fa-file" aria-hidden="true"></i><h3>Resume</h3></a></div>
+                      <div className="oneContact"><a href="tel:864-316-8588">
+                        <div className="iContainer"><i className="fa fa-phone" aria-hidden="true"></i></div>
+                        <h3>864.316.8588</h3></a>
+                      </div>
+
+                      <div className="oneContact"><a href="mailto:mcverticchio@gmail.com?subject=Hello!">
+                        <div className="iContainer"><i className="fa fa-envelope" aria-hidden="true"></i></div>
+                        <h3>mcverticchio@gmail.com</h3></a>
+                      </div>
+
+                      <div className="oneContact"><a href="https://github.com/mcverticchio" target="_blank">
+                        <div className="iContainer"><i className="fa fa-github" aria-hidden="true"></i></div>
+                        <h3>github.com/mcverticchio</h3></a>
+                      </div>
+
+                      <div className="oneContact"><a href="documents/Resume2016.pdf" target="_blank">
+                        <div className="iContainer"><i className="fa fa-file" aria-hidden="true"></i></div>
+                        <h3>Resume</h3></a>
+                      </div>
                     </div>
                   </div>
               </div>

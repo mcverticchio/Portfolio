@@ -131,7 +131,7 @@ body {
 
   }
   .title {
-    color: #2F2F2F;
+    color: $black;
     font-size: 17px;
     font-family: 'Yrsa';
     text-transform: none;
@@ -221,24 +221,19 @@ body {
       vertical-align: middle;
       text-align: center;
       border-radius: 50%;
-      // margin-right:5px;
       margin:0px 5px;;
     }
-    .fa-linkedin-square {
+    .fa-linkedin-square:hover {
       background: #2673B0;
     }
-    .fa-facebook-square {
+    .fa-facebook-square:hover {
       background: #3B5998;
     }
-    .fa-twitter {
+    .fa-twitter:hover {
       background: #1DA0F0;
     }
-    .fa-medium {
+    .fa-medium:hover {
       background: #33E051;
-    }
-    i:hover {
-      border: 3px solid $black;
-      line-height: 35px;
     }
   }
 }
@@ -376,46 +371,54 @@ body {
     text-align: left;
     display: inline-block;
   }
+  .iContainer {
+    display: inline-block;
+    @media(max-width: 419px){
+      display: block;
+      text-align: center;
+    }
+  }
   h3 {
     font-family: 'Gill Sans';
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    text-align: center;
-  }
-  h3 {
     text-align: left;
     text-transform: none;
     font-weight: lighter;
     display: inline-block;
     font-size: 18px;
     color: $grey;
-  }
-    i {
-      color: white;
-      background: $black;
-      font-size: 18px;
-      width: 40px;
-      height: 40px;
-      line-height: 41px;
-      vertical-align: middle;
+    @media(max-width: 419px){
+      display: block;
       text-align: center;
-      border-radius: 50%;
-      margin-right: 15px;
-    }
-    .oneContact:hover {
-      cursor: pointer;
-      i {
-        border: 3px solid $pink;
-        line-height:35px;
-        // background: $pink;
-        // transition:0.2s ease;
-      }
-      h3 {
-        color: $pink;
-        transition:0.2s ease;
-      }
     }
   }
+  i {
+    color: white;
+    background: $black;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 41px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .oneContact:hover {
+    cursor: pointer;
+    i {
+      border: 3px solid $pink;
+      line-height:35px;
+      // background: $pink;
+      // transition:0.2s ease;
+    }
+    h3 {
+      color: $pink;
+      transition:0.2s ease;
+    }
+  }
+}
 
 
 //################### TIMELINE SECTION STYLES ###############################################//

@@ -114,7 +114,7 @@ var ResumeContainer = React.createClass({
         <div className="container resumePDF">
           <div className="row resumeHolder">
             <div>
-              <a href="documents/resume.pdf" target="_blank">
+              <a href="documents/Resume2016.pdf" target="_blank">
                 <div className="col-sm-12 col-xs-12 contact">
                   <i className="fa fa-file pdfFile" aria-hidden="true"></i>
                   <span>Download PDF</span>

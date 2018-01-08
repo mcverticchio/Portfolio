@@ -34,31 +34,36 @@ var ResumeContainer = React.createClass({
               <h3>Dev. Skills & Experience</h3>
               <h4>The Iron Yard-- Greenville, SC</h4>
               <h5>Front End Engineering Student: Fall 2016</h5>
-              <span>The Iron Yard is a 12-week front-end development program that teaches the latest technologies and best practices.
-                Students complete daily assignments that test their knowledge and allow for development and refining of programming skills. </span>
+              <p>The Iron Yard is a 12-week front-end development program that teaches the latest technologies and best practices.
+                Students complete daily assignments that test their knowledge and allow for development and refining of programming skills. </p>
+
               <div className="col-md-4 skill">
                 <h4>Languages</h4>
-                <ul>
-                  <li><span>JavaScript/jQuery</span></li>
-                  <li><span>HTML 5</span></li>
-                  <li><span>CSS3/SASS</span></li>
-                  <li><span>Django/Python</span></li>
-                </ul>
+                  <span><i className="devicon-html5-plain-wordmark colored"></i></span>
+                  <span><i className="devicon-css3-plain-wordmark colored"></i></span>
+                  <span><i className="devicon-javascript-plain colored"></i></span>
+                  <br></br>
+                  <span><i className="devicon-jquery-plain-wordmark colored"></i></span>
+                  <span><i className="devicon-python-plain-wordmark colored"></i></span>
               </div>
+
               <div className="col-md-4 skill">
                 <h4>Frameworks</h4>
-                <ul>
-                  <li><span>BackboneJS</span></li>
-                  <li><span>React</span></li>
-                </ul>
+                  <span><i className="devicon-backbonejs-plain-wordmark colored"></i></span>
+                  <span><i className="devicon-react-original-wordmark colored"></i></span>
+                  <span><i className="devicon-django-plain colored"></i></span>
               </div>
+
               <div className="col-md-4 skill">
                 <h4>Tools</h4>
-                <ul>
-                  <li><span>Templating: Underscore/Handlebars</span></li>
-                  <li><span>Version Control: Git</span></li>
-                  <li><span>Design: Bootstrap /Adobe Creative Cloud</span></li>
-                </ul>
+                      <i className="devicon-github-plain colored"></i>
+                      <i className="devicon-git-plain-wordmark colored"></i>
+                      <i className="devicon-bootstrap-plain-wordmark colored"></i>
+                      <i className="devicon-sass-original colored"></i>
+                        <br></br>
+                      <i className="devicon-heroku-original-wordmark colored"></i>
+                      <i className="devicon-trello-plain-wordmark colored"></i>
+                      <i className="devicon-atom-original-wordmark colored"></i>
               </div>
             </div>
           </div>

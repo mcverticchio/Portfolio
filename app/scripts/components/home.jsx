@@ -54,7 +54,7 @@ var HomeContainer = React.createClass({
           <div className="introSection row">
             <div className="aboutMe col-md-12 col-sm-12 col-xs-12">
               <div className="introWords">
-              <span col-md-12 col-xs-12 col-sm-12>Hi, I'm Caroline</span>
+              <span col-md-12 col-xs-12 col-sm-12>Hi, <br />I'm Caroline</span>
               <p col-md-12 col-xs-12 col-sm-12>I want to help shape the web</p>
               </div>
             </div>
@@ -71,29 +71,6 @@ var HomeContainer = React.createClass({
                 <h3 className="aboutMeTitle">About Me</h3>
                 <div className="borderBottom col-md-12 col-sm-12 col-xs-12"></div>
                 <p className="description col-xs-12">I am from Spartanburg, South Carolina.  I love to be outdoors and explore new places. I have a passion for music and anything food related.  I have recently discovered a new passion for designing and creating web applications.  After working in healthcare for a few years I realized my ambitions lie elsewhere and I discovered the coding world. Every day presents a new challenge and I am excited to continue learning and expanding my programming skills. Please contact me if your company is looking for someone like me! </p>
-                  <div className="contact">
-                    <div className="contactBlock">
-                      <div className="oneContact"><a href="tel:864-316-8588">
-                        <div className="iContainer"><i className="fa fa-phone" aria-hidden="true"></i></div>
-                        <h3>864.316.8588</h3></a>
-                      </div>
-
-                      <div className="oneContact"><a href="mailto:mcverticchio@gmail.com?subject=Hello!">
-                        <div className="iContainer"><i className="fa fa-envelope" aria-hidden="true"></i></div>
-                        <h3>mcverticchio@gmail.com</h3></a>
-                      </div>
-
-                      <div className="oneContact"><a href="https://github.com/mcverticchio" target="_blank">
-                        <div className="iContainer"><i className="fa fa-github" aria-hidden="true"></i></div>
-                        <h3>github.com/mcverticchio</h3></a>
-                      </div>
-
-                      <div className="oneContact"><a href="documents/Resume2016.pdf" target="_blank">
-                        <div className="iContainer"><i className="fa fa-file" aria-hidden="true"></i></div>
-                        <h3>Resume</h3></a>
-                      </div>
-                    </div>
-                  </div>
               </div>
             </div>
           </div>
@@ -157,13 +134,3 @@ var HomeContainer = React.createClass({
 module.exports = {
   HomeContainer: HomeContainer
 }
-
-// <a href={'#project/' + project.id + '/'} key={project.id} className="col-xs-12 col-sm-6 col-md-4 thumb">
-//   <div className="gallery">
-//     <div className="gallery-image">
-//     </div><img className="mainProjectImage" src={project.img} alt="..." />
-//     <div className="caption">
-//       <h4>{project.title}</h4>
-//     </div>
-//   </div>
-// </a>

@@ -31,9 +31,8 @@ var TemplateContainer = React.createClass({
   },
   handleContactNav: function(e){
     e.preventDefault();
-    Backbone.history.navigate('#/#welcomeSection', {trigger:true});
       $('html, body').animate({
-        scrollTop: $('#welcomeSection').offset().top-135
+        scrollTop: $('#footer').offset().top
       }, 1500);
   },
   render: function(){
@@ -42,7 +41,7 @@ var TemplateContainer = React.createClass({
         <Navbar className="topContainer header" inverse collapseOnSelect>
 
             <Navbar.Header className="navBarContainer">
-              
+
               <Navbar.Toggle />
                 <Nav>
                   <NavItem onClick={this.handleHomeNav} className="nameDescHolder" href="#" className="name"><span className="myName">Caroline Verticchio/</span><span className="title">Front-end Developer</span></NavItem>
@@ -69,13 +68,39 @@ var TemplateContainer = React.createClass({
         <div className="container-fluid">
           <div className="row footer" id="footer">
             <div className="bottomLine"></div>
-            <div className="col-md-12 followMe">
-              <h2>Follow Me</h2>
-                <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile" target="_blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/caroline.verticchio" target="_blank"><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://medium.com/@mcverticchio" target="_blank"><i className="fa fa-medium" aria-hidden="true"></i></a>
-            </div>
+              <div className="contact col-md-6">
+                <div className="contactBlock">
+                  <div className="oneContact"><a href="tel:864-316-8588">
+                    <div className="iContainer"><i className="fa fa-phone" aria-hidden="true"></i></div>
+                    <h3>864.316.8588</h3></a>
+                  </div>
+
+                  <div className="oneContact"><a href="mailto:mcverticchio@gmail.com?subject=Hello!">
+                    <div className="iContainer"><i className="fa fa-envelope" aria-hidden="true"></i></div>
+                    <h3>mcverticchio@gmail.com</h3></a>
+                  </div>
+
+                  <div className="oneContact"><a href="documents/Resume2016.pdf" target="_blank">
+                    <div className="iContainer"><i className="fa fa-file" aria-hidden="true"></i></div>
+                    <h3>Resume</h3></a>
+                  </div>
+
+                  <div className="oneContact"><a href="https://github.com/mcverticchio" target="_blank">
+                    <div className="iContainer"><i className="fa fa-github" aria-hidden="true"></i></div>
+                    <h3>github.com/mcverticchio</h3></a>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div className="col-md-6 followMe">
+                <h2>Follow Me</h2>
+                  <a href="https://www.linkedin.com/in/caroline-verticchio-b93348123?trk=nav_responsive_tab_profile" target="_blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                  <a href="https://www.facebook.com/caroline.verticchio" target="_blank"><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
+                  <a href="https://twitter.com/mcverticchio" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="https://medium.com/@mcverticchio" target="_blank"><i className="fa fa-medium" aria-hidden="true"></i></a>
+              </div>
           </div>
         </div>
       </div>
@@ -86,12 +111,3 @@ var TemplateContainer = React.createClass({
 module.exports = {
   TemplateContainer: TemplateContainer
 }
-
-// <div className="col-md-6 contact">
-//   <div className="contactBlock">
-//     <div className="oneContact"><a href="tel:864-316-8588"><i className="fa fa-phone" aria-hidden="true"></i></a><h3>mcverticchio@gmail.com</h3></div>
-//     <div className="oneContact"><a href="mailto:mcverticchio@gmail.com?subject=Hello!"><i className="fa fa-envelope" aria-hidden="true"></i></a><h3>864.316.8588</h3></div>
-//     <div className="oneContact"><a href="https://github.com/mcverticchio" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></a><h3>github.com/mcverticchio</h3></div>
-//     <div className="oneContact"><a href="documents/resume.pdf" target="_blank"><i className="fa fa-file" aria-hidden="true"></i></a><h3>Resume</h3></div>
-//   </div>
-// </div>
